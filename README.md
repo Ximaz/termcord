@@ -11,7 +11,7 @@ The main goal of this project is to be able to have some Discord features into a
 - [X] Generation of OAuth2 url
 - [ ] Recieve the Discord OAuth2 token.
 - [ ] Sending web requests to Discord OAuth2 API (token refresh, API interaction, ...) token.
-- ...
+- [ ] Other stuff that I don't have idea for now.
 - [ ] Display a good GUI into the terminal.
 
 # Setup
