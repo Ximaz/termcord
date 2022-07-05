@@ -33,7 +33,7 @@ static char const *OAUTH2_SCOPES[] = {
     "dm_channels.read",
 };
 
-char *build_oauth_scopes()
+char *build_oauth2_scopes()
 {
     int i = 0;
     char const *scope = 0;
@@ -87,7 +87,7 @@ char* urlencode(char const *url)
 char *build_oauth_url(client_t *client, char const *url)
 {
     char *format = "https://discord.com/api/oauth2/authorize?client_id=%s&redirect_uri=%s&response_type=code&scope=%s";
-    char *scopes = build_oauth_scopes();
+    char *scopes = build_oauth2_scopes();
     char *url_encoded = urlencode(url);
     size_t buff_len = strlen(format) + strlen(client->client_id) + strlen(url_encoded) + strlen(scopes);
     char *buffer = (char *) calloc(buff_len + 1, sizeof(char));
