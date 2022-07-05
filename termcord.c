@@ -1,38 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "include/types.h"
-#include "include/dotenv.h"
-#include "include/build_url.h"
+#include "include/client.h"
 
 int main(void)
 {
-    // Filename can't have a length higher than 256.
-    char dotenv_path[257];
-    char const *local_server = "http://localhost:7563/discord/oauth";
-    // char const *client_id = "993615435079630848";
-    // char const *client_secret = "-";
-    dotenv_t *dotenv = 0;
-    char *oauth_url = 0;
-    client_t *client = (client_t *)malloc(sizeof(client_t));
-
-    if (!client) {
-        perror("Error :");
-        return 1;
-    }
-    printf("Where is your .env file ?\n(enter file's path) : ");
-    scanf("%s", dotenv_path);
-    dotenv = load_env(dotenv_path);
-    if (!dotenv) {
-        free(client);
-        perror("Error :");
-        return 1;
-    }
-    client->client_id = get_var(dotenv, "CLIENT_ID");
-    client->client_secret = get_var(dotenv, "CLIENT_SECRET");
-    oauth_url = build_oauth_url(client, local_server);
-    printf("\nPlease, allow the Discord OAuth2 app to access to your Discord account :\n\n%s\n", oauth_url);
-    destroy_env(dotenv);
-    free(oauth_url);
-    free(client);
+    client_t *client = new_client();
+    printf("\nPlease, allow the Discord OAuth2 app to access to your Discord account :\n\n%s\n", client->oauth2_url);
+    destroy_client(client);
     return 0;
 }

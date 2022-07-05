@@ -1,7 +1,7 @@
 #include <errno.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 #include "../include/dotenv.h"
 
 static char *strip_end_of_line(char *line)
@@ -94,14 +94,15 @@ char *get_var(dotenv_t *dotenv, char *name)
     char *buffer = 0;
     dotenv_var_t *dotenv_var = 0;
 
-    if (buffer)
-        buffer[0] = 0;
     for (; i < dotenv->vars_len; i++) {
         dotenv_var = dotenv->vars[i];
         if (strcmp(dotenv_var->name, name) == 0)
             buffer = dotenv_var->value;
     }
-    if (!buffer)
-        buffer = (char *) malloc(sizeof(char));
+    if (!buffer) {
+            buffer = (char *) malloc(sizeof(char));
+        if (buffer)
+            buffer[0] = 0;
+    }
     return buffer;
 }

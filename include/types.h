@@ -3,8 +3,9 @@
 
 typedef struct client_s
 {
-    char const *client_id;
-    char const *client_secret;
+    char *client_id;
+    char *client_secret;
+    char *oauth2_url;
 } client_t;
 
 #endif
