@@ -8,7 +8,8 @@ The main goal of this project is to be able to have some Discord features into a
 - Include the [`state`](https://discord.com/developers/docs/topics/oauth2#state-and-security) param to OAuth2 URL
 
 # Roadmap
-- [X] Generation of OAuth2 url
+- [X] Generation of OAuth2 url.
+- [X] Adding a .env parser.
 - [ ] Recieve the Discord OAuth2 token.
 - [ ] Sending web requests to Discord OAuth2 API (token refresh, API interaction, ...) token.
 - [ ] Other stuff that I don't have idea for now.
