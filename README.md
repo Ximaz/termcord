@@ -11,9 +11,6 @@ I think the only way to get an available application is to use a User token, but
 ## Resources
 - [The Discord OAuth2 API](https://discord.com/developers/docs/topics/oauth2#oauth2)
 
-## TODO
-- Include the [`state`](https://discord.com/developers/docs/topics/oauth2#state-and-security) param to OAuth2 URL
-
 ## Planned features
 Below you will find the list of all feature that can be integrated to the project.
 - Lines starting by `// REQUIRES DISCORD APPROVAL` are the feature that wont be added in the project, since Discord has to verify each application to allow or not the usage of those endpoints.
