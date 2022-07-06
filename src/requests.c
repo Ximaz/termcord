@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <curl/curl.h>
-#include "../include/requests.h"
+#include "../include/types.h"
 
 static size_t store_response(void *contents, size_t size, size_t nmemb, void *userp)
 {

@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include "../include/types.h"
 #include "../include/base64.h"
 #include "../include/requests.h"
 #include "../include/build_url.h"

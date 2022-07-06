@@ -7,6 +7,39 @@ The main goal of this project is to be able to have some Discord features into a
 ## TODO
 - Include the [`state`](https://discord.com/developers/docs/topics/oauth2#state-and-security) param to OAuth2 URL
 
+## Planned features
+Below you will find the list of all feature that can be integrated to the project.
+- Lines starting by `// REQUIRES DISCORD APPROVAL` are the feature that wont be added in the project, since Discord has to verify each application to allow or not the usage of those endpoints.
+- Lines starting by `// USELESS` are the feature that can't be aded in the project, since it doesn't match for a user-client usage. E.g : the bot feature is worthless.
+```c
+static char const *OAUTH2_SCOPES[] = {
+    "identify",
+    "email",
+    "connections",
+    "guilds",
+    "guilds.members.read",
+    "gdm.join",
+    "applications.builds.read",
+    "applications.commands",
+    "applications.store.update",
+    "applications.entitlements",
+    "messages.read",
+    // USELESS : "webhook.incoming",
+    // USELESS : "bot",
+    // REQUIRES DISCORD APPROVAL : "rpc",
+    // REQUIRES DISCORD APPROVAL : "rpc.notifications.read",
+    // REQUIRES DISCORD APPROVAL : "rpc.voice.read",
+    // REQUIRES DISCORD APPROVAL : "rpc.voice.write",
+    // REQUIRES DISCORD APPROVAL : "rpc.activities.write",
+    // REQUIRES DISCORD APPROVAL : "applications.builds.upload",
+    // REQUIRES DISCORD APPROVAL : "activities.read",
+    // REQUIRES DISCORD APPROVAL : "activities.write",
+    // REQUIRES DISCORD APPROVAL : "relationships.read",
+    // REQUIRES DISCORD APPROVAL : "voice",
+    // REQUIRES DISCORD APPROVAL : "dm_channels.read",
+};
+```
+
 ## Roadmap
 - [X] Generation of OAuth2 url.
 - [X] Adding a .env parser.
