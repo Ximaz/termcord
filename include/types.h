@@ -5,7 +5,7 @@ typedef struct client_s
 {
     char *client_id;
     char *client_secret;
-    char *oauth2_url;
+    char *scope;
 } client_t;
 
 #endif

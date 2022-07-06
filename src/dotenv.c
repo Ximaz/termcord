@@ -23,7 +23,7 @@ static dotenv_var_t *load_var(char *line)
     line = strip_end_of_line(line);
     while (line[i++] != '=');
     dotenv_var->name = strndup(line, i - 1);
-    dotenv_var->value = strdup(&line[i + 1]);
+    dotenv_var->value = strdup(&line[i]);
     return dotenv_var;
 }
 

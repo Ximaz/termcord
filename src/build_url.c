@@ -4,33 +4,32 @@
 #include <stdlib.h>
 #include "../include/types.h"
 
-static int const OAUTH2_SCOPES_LEN = 24;
+static int const OAUTH2_SCOPES_LEN = 11;
 
 static char const *OAUTH2_SCOPES[] = {
     "identify",
     "email",
     "connections",
     "guilds",
-    "guilds.join",
     "guilds.members.read",
     "gdm.join",
-    "rpc",
-    "rpc.notifications.read",
-    "rpc.voice.read",
-    "rpc.voice.write",
-    "rpc.activities.write",
-    "webhook.incoming",
+    // REQUIRE DISCORD APPROVAL : "rpc",
+    // REQUIRE DISCORD APPROVAL : "rpc.notifications.read",
+    // REQUIRE DISCORD APPROVAL : "rpc.voice.read",
+    // REQUIRE DISCORD APPROVAL : "rpc.voice.write",
+    // REQUIRE DISCORD APPROVAL : "rpc.activities.write",
+    // USELESS : "webhook.incoming",
     "messages.read",
-    "applications.builds.upload",
+    // REQUIRE DISCORD APPROVAL : "applications.builds.upload",
     "applications.builds.read",
     "applications.commands",
     "applications.store.update",
     "applications.entitlements",
-    "activities.read",
-    "activities.write",
-    "relationships.read",
-    "voice",
-    "dm_channels.read",
+    // REQUIRE DISCORD APPROVAL : "activities.read",
+    // REQUIRE DISCORD APPROVAL : "activities.write",
+    // REQUIRE DISCORD APPROVAL : "relationships.read",
+    // REQUIRE DISCORD APPROVAL : "voice",
+    // REQUIRE DISCORD APPROVAL : "dm_channels.read",
 };
 
 char *build_oauth2_scopes(int as_body)
