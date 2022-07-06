@@ -4,7 +4,7 @@ The main goal of this project is to be able to have some Discord features into a
 ## Discontinued
 This project is discontinued.
 
-I didn't realized before starting this project, but... **THERE IS NO EVENT ROUTE FOR OAUTH2 !** Which means their is no route to get new messages without having to perform a HTTP request to get them each second. Half of features, which were the best of all of them, are not implementable since it requires the Discord approval. See `### Planed features`. This project will get archived because even though the project can't reach end, it has some code snippet which are very interesting, especially about cURL wrapper and the small base64 encoding function.
+I didn't realized before starting this project, but... **THERE IS NO EVENT ROUTE FOR OAUTH2 !** Which means their is no route to get new messages without having to perform a HTTP request to get them each second. Half of features, which were the best of all of them, are not implementable since it requires the Discord approval. See `### Planned features`. This project will get archived because even though the project can't reach end, it has some code snippet which are very interesting, especially about cURL wrapper and the small base64 encoding function.
 
 I think the only way to get an available application is to use a User token, but doing so, the account might be banned by Discord, which is definitely not what I wish when I entend to use Discord on a terminal.
 
